@@ -48,6 +48,12 @@ composer.json:
 }
 ```
 
+Inclue `vendor/autoload.php` in your `bootstrap.php` of PHPUnit to load `Expose` components:
+
+```
+require_once 'vendor/autoload.php';
+```
+
 ## License
 
 MIT License
