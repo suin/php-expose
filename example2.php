@@ -1,9 +1,9 @@
-# Expose
-
-`Expose` makes non-public properties and methods be testable to help your unit tests with PHPUnit.
-
-```php
 <?php
+
+// Load test target classes
+spl_autoload_register(function($c) { @include_once strtr($c, '\\_', '//').'.php'; });
+set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__.'/Source');
+
 use \Expose\Expose as e;
 
 class Object
@@ -26,26 +26,3 @@ e::expose($object)
 
 // Call non-public method
 $result = e::expose($object)->call('_hello', 'Suin');
-```
-
-## Requirements
-
-* PHP 5.3 or later
-
-## Installation
-
-Just git-clone or inntall via composer.
-
-composer.json:
-
-```json
-{
-	"require": {
-		"suin/php-expose": ">=1.0"
-	}
-}
-```
-
-## License
-
-MIT License
