@@ -2,6 +2,8 @@
 
 `Expose` makes non-public properties and methods be testable to help your unit tests with PHPUnit.
 
+The build status of the current master branch is tracked by Travis CI: [![Build Status](https://secure.travis-ci.org/suin/php-expose.png)](http://travis-ci.org/suin/php-expose)
+
 ```php
 <?php
 use \Expose\Expose as e;
